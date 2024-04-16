@@ -1,9 +1,3 @@
-It seems like you want to create a detailed Markdown guide for basic Git and GitHub operations tailored for beginners. Markdown syntax doesn't support LaTeX-style commands like `\[]` for centering or any other purposes, so I'll adjust your file to use plain Markdown and explain each command in detail as you requested.
-
-Here's a revised version of your guide with step-by-step instructions, explanations, and examples:
-
----
-
 # Intro to Contributing with GitHub
 
 Welcome to the world of version control with Git and GitHub. This guide will walk you through the fundamental commands you'll need to start contributing to projects. Remember, before making any changes, always pull the latest updates from the repository.
