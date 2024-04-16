@@ -93,15 +93,6 @@ If it's the first time you're pushing, you might need to set the upstream branch
 git push --set-upstream origin [branch-name]
 ```
 
-### Handling Merge Conflicts
-
-If there is a conflict between your changes and the changes on the server, `git pull` will warn you. To resolve conflicts, manually edit the files to correct the discrepancies and then:
-
-```bash
-git add [resolved-file]
-git commit -m "Resolved merge conflict by [your resolution]"
-```
-
 ### Working with Branches
 
 To create a new branch:
@@ -115,6 +106,55 @@ To switch to an existing branch:
 ```bash
 git checkout [branch-name]
 ```
+
+### Handling Common Conflicts
+
+#### Common Conflicts with Git Pull
+Conflicts can occur when pulling updates. Here are scenarios and solutions:
+
+##### Merge Conflicts
+- **Modified Same Lines**: Manual resolution is needed when the same lines are changed in your local and the remote.
+- **Deleted vs. Modified Files**: Decide whether to keep the deletion or modification during the merge.
+
+##### Local Changes Not Committed
+- **Uncommitted Changes**: Commit, stash, or discard your changes before pulling to avoid conflicts.
+
+##### Branch Issues
+- **Tracking Different Branches**: Ensure your local branch tracks the correct upstream branch.
+
+##### Other Potential Issues
+- **File Permission and Disk Space Issues**: Ensure you have adequate permissions and disk space.
+
+#### Handling Merge Conflicts
+1. **Use `git status`** to check the state of your repository.
+2. **Stash Uncommitted Changes**: Use `git stash` to save uncommitted changes temporarily.
+3. **Resolve Merge Conflicts**: Edit the files to fix conflicts or use a merge tool.
+4. **Commit Resolved Conflicts**: Commit the resolved changes.
+
+#### Potential Conflicts During Git Push
+Push conflicts usually stem from diverged branch histories.
+
+##### Non-Fast-Forward Updates
+- **Remote Changes**: Pull and merge changes before pushing to integrate remote updates smoothly.
+
+##### Rejected Due to Conflicting Changes
+- **Concurrent Modifications**: Fetch the latest changes, resolve any conflicts, and then push again.
+
+##### Branch Protection Rules
+- **Restricted Push Access**: Use pull requests to propose your changes for protected branches.
+
+##### Other Possible Issues
+- **Authentication and Large Push Size**: Ensure correct credentials and consider pushing smaller sets of changes.
+
+#### Tips for Smooth Collaboration
+- **Communicate with Collaborators**: Avoid overlapping modifications.
+- **Pull Before Pushing**: Always update your branch before starting work.
+- **Follow Branch Protection Rules**: Respect the workflows established in your project.
+
+### Conclusion
+Remember, the key to successful use of Git is consistent communication and adherence to project workflows. Always pull the latest changes before starting work and resolve conflicts as they arise to maintain a clean project history.
+
+By following these guidelines and using the commands provided, you can effectively manage your contributions to any project on GitHub.
 
 ### Remember:
 
