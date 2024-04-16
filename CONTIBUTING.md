@@ -6,30 +6,39 @@ Welcome to the world of version control with Git and GitHub. This guide will wal
 
 Here are the core Git commands you will use regularly:
 
+- `git fork`: Make a copy of someone else's repository to your GitHub account
+- `git clone`: Copy a repository from GitHub to your local machine
 - `git pull`: Fetch and merge changes from the remote server to your working directory
 - `git push`: Send your commits to the remote repository
 - `git commit`: Save your changes with a descriptive message
 - `git branch`: Manage branches in your repository
 - `git checkout`: Switch between branches or restore files
-- `git clone`: Copy a repository from GitHub to your local machine
 
 ## Step-by-Step Guide
 
-### Step 1: Cloning a Repository
+### Step 1: Forking a Repository
 
-To start working on a project, you first need to clone its repository from GitHub.
-
-```bash
-git clone [repository link]
-```
-
-#### How to get the **[repository link]**?
+Before you can start working on a project, if you don't have write access to the repository, you will need to create a fork.
 
 1. Go to the main page of the repository on GitHub.
+2. At the top-right of the page, click the "Fork" button.
+3. This creates a copy of the repository under your GitHub account. Now, you can make changes to your fork without affecting the original repository.
+
+### Step 2: Cloning a Repository
+
+Once you have forked the repository, you need to clone it to your local machine to start working on it.
+
+```bash
+git clone [forked repository link]
+```
+
+#### How to get the **[forked repository link]**?
+
+1. Navigate to your fork on GitHub (it should be at `https://github.com/your-username/repository-name`).
 2. Click on the "Clone or download" button.
 3. Copy the link provided.
 
-### Step 2: Pulling Changes
+### Step 3: Pulling Changes
 
 Before you start coding, ensure your local copy is up to date by running:
 
@@ -39,7 +48,7 @@ git pull
 
 This command helps avoid conflicts by updating your local repository with the latest changes from the remote server.
 
-### Step 3: Making Changes
+### Step 4: Making Changes
 
 Once your repository is up to date, you can start making changes. After you've modified existing files or added new files, you need to stage these changes for a commit.
 
@@ -57,9 +66,7 @@ Or add a specific file:
 git add [file name]
 ```
 
-Using `git add .` adds all changes in the directory, whereas `git add [file name]` allows you to specify which changes to stage, which is useful for excluding temporary or experimental changes.
-
-### Step 4: Committing Changes
+### Step 5: Committing Changes
 
 After staging your changes, you should commit them with a clear, descriptive message:
 
@@ -72,9 +79,7 @@ Example:
 git commit -m "Added documentation for motor commands in moteus_test.py"
 ```
 
-Your commit message should succinctly describe what the changes do and why, if necessary.
-
-### Step 5: Pushing Changes
+### Step 6: Pushing Changes
 
 To share your commits with others, push your changes to the remote repository:
 
